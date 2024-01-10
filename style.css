@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.sidebar {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+
+
+.hub {
+  height: 200px;
+  width: 80%;
+}
+
+.mainBody {
+  width: 80%
+}
+.endIslands {
+  height: 300px;
+}
+.farming {
+  height: 200px;
+}
+.minions {
+  height: 500px;
+}
+.minionSlot {
+  height: 100px;
+  width: 100px;
+  background-color: #ffffff;
+  color: white;
+}
