@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>meme</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- 
+  hello, I know the code is a bit messy and barebones, but im working on it. 
+  my list of things to implement:
+  add mining
+  add upgrades
+  add cleaner shops
+  add css
+  make buttons progressive like the harvesting one
+  add a bank?
+  add minions
+
+  not in that particular order
+  issues im aware of:
+  sometimes buying armor makes funky numbers
+  the grind is really long, and doesnt save.
+
+  if u want to give yourself coins and stuff, the variable is just "coins"
+  if u want to use the code, thats fine, but its a little goofy and there are many better places to get code from.
+  
+  -->
+  
+
+  <!--
+sidebar
+  -->
+  <div class='sidebar'>
+    <p>player stats:</p>
+    <p id='coins'>coins: <span id='coinsCounter'>0</span></p>
+    <p>health: <span id='healthBar'>100</span> defense: <span id='defenseBar'>0</span></p>
+
+    
+    <p id='totalZealots'>total zealots: <span id='totalZealotsCounter'>0</span></p>
+
+    <p>harvesting LVL: <span id="harvestingLvlCounter">0</span></p>
+
+<p>Farming Fortune: <span id='farmingFortuneCounter'>0</span></p>
+    
+    <p>zealot LVL: <span id='zealotLvlCounter'>1</span><br><br> scavenger: <span id='scavengerCounter'>0</span><br><br> zealot damage(to the player): <span id='zealotDamageCounter'>10hp</span></p>
+    <p>stored wheat: <span id='wheatSiloCounter'>0</span></p>
+
+
+    <p>hi, this is a simple hypixel simulator that i will be updating sometime in the future. its very basic at the moment, but i do plan on adding css and more fetures like mining, foraging, and more minions. there are some goofy things i havent fixed, but everything functions for the most part. (things like the death message not going away and funny heath numbers) there will also be some changes to combat, as it is not very good at the moment. the prices will also likely be changed for many things. also, there is no saving.</p>
+    
+  </div>
+
+  <!--
+hub/shop
+  -->
+  <div class='mainBody'>
+<div class = 'hub'>
+<!--scavenger shop-->
+<button id='scavengerButton' onclick='buyScavenger()'>scavenger, <span id='scavengerCost'>100</span></button>
+<button id='scavTaliButton' onclick='buyScavengerTali()'></span> Scavenge Talisman, 10b</button>
+    <!--end of scavenger shop, beggining of armor shop-->
+
+
+<button id='EnderArmorHelmButton' onclick='buyEnderArmorHelm()'>Ender Armor Helmet, 100</button>
+  <button id='EnderArmorChestButton' onclick='buyEnderArmorChest()'>Ender Armor Chest, 100</button>
+  <button id='EnderArmorLegsButton' onclick='buyEnderArmorLegs()'>Ender Armor Legs, 100</button>
+  <button id='EnderArmorBootsButton' onclick='buyEnderArmorBoots()'>Ender Armor Boots, 100</button>
+
+  <!--farming shop-->
+<button id='hoeT1Button' onclick='buyHoeT1()'>Hoe Tier 1, 100</button>
+<button id='hoeT2Button' onclick='buyHoeT2()'>Hoe Tier 2, 1k</button>
+<button id='hoeT3Button' onclick='buyHoeT3()'>Hoe Tier 3, 10k</button>
+<button id='hoeT4Button' onclick='buyHoeT4()'>Hoe Tier 4, 100k</button>
+<button id='hoeT5Button' onclick='buyHoeT5()'>Hoe Teir 5, 2x farming boost, 1m</button> 
+<button id='harvestingButton' onclick='buyHarvesting()'>Harvesting, <span id='harvestingPrice'>500</span></button>
+  
+
+  
+
+</div>
+  <br>
+
+
+  <div class='farming' height='300px'>
+    <marquee width="80%" direction="right" height="250px">
+    <button onclick="harvestWheat()"><img src='imgs/wheat.jpeg'></button>
+    </marquee>
+
+  </div>
+  
+  <!--
+end island
+  -->
+
+  
+<div class='endIslands'>
+  <button onclick='upgradeZealot()'>upgrade zealot</button><button onclick='downgradeZealot()'>downgrade zealot</button><br>
+  
+   <button id='bigZealot' onclick='bigZealotClick()'><img src='imgs/zealot.png'></button>
+  <br>
+  
+  <p id='deathMessage'></p>
+
+  </div>
+    
+    <div class='minions'>
+<div class='minionSlot' id='minionSlot1'>
+
+  </div>
+      <button id='minionSlot1Button' onclick='buyMinionSlot1()'>buy minion slot 1, 100</button>
+      <br>
+      
+      <button id='wheatMinionButton1' onclick='wheatMinion1()'><span id='wheat1Buy/Up'>buy</span> wheat minion, <span id='wheatMinion1Price'>200</span> wheat</button>
+    </div>
+
+    
+
+    
+  </div>
+
+<!--
+  <div class='farming' height='300px'>
+    <marquee width="80%" direction="right" height="250px">
+    <img src='imgs/wheat.jpeg'>
+    </marquee>
+
+  </div>
+  
+  <!--extra stuff -->
+  <script src="script.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.1/math.js"></script>
+
+  
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+ 
+
+</body>
+
+</html>
+
+
+<!--
+
+-->
